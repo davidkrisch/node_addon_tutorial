@@ -1,0 +1,19 @@
+This project contains the changes I had to make to the source
+in the tutorial at:
+
+    http://nikhilm.bitbucket.org/articles/c_in_my_javascript/c_in_javascript_part_1.html
+
+I had to modify the build() function in wscript because:
+
+    from os import name as platform
+
+on my Mac reports "posix" as the platform.  I also had to modify
+test.js to correctly import the uuid module.
+
+To build:
+
+    node-waf configure build
+
+To run:
+
+    node test.js
